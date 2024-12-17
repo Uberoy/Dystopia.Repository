@@ -50,12 +50,10 @@ public class RabbitMqConsumerService : BackgroundService
             catch (JsonException jsonEx)
             {
                 _logger.LogError(jsonEx, "JSON deserialization error while processing message: {Message}", Encoding.UTF8.GetString(args.Body.ToArray()));
-                // Optionally: Dead Letter or requeue logic for malformed messages
             }
             catch (MongoException mongoEx)
             {
                 _logger.LogError(mongoEx, "MongoDB operation failed while saving the ticket.");
-                // Optionally: Implement retry logic if required
             }
             catch (Exception ex)
             {
