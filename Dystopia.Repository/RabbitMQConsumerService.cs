@@ -3,7 +3,6 @@ using System.Text.Json;
 using Dystopia.Repository;
 using Dystopia.Repository.Entities;
 using Dystopia.Repository.Repository;
-using Microsoft.Extensions.DependencyInjection;
 using MongoDB.Driver;
 using RabbitMQ.Client.Events;
 
