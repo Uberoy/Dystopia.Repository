@@ -61,7 +61,6 @@ public class RabbitMqConsumerService : BackgroundService
             }
         };
 
-
         _rabbitMqService.Consume(consumer);
         return Task.CompletedTask;
     }
