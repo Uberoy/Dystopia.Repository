@@ -9,5 +9,7 @@ public class Ticket
     public string? Id { get; set; }
     public string UserId { get; set; }
     public string Content { get; set; }
+
+    [BsonRepresentation(BsonType.DateTime)]
     public DateTime DateCreated { get; set; }
 }
