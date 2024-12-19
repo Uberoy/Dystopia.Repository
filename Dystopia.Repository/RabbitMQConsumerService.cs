@@ -39,7 +39,7 @@ public class RabbitMqConsumerService : BackgroundService
                 {
                     throw new InvalidOperationException("Deserialized ticket is null or invalid.");
                 }
-
+                _logger.LogInformation("Deserialized ticket: {TicketId}, Created: {Created}", ticket.Id, ticket.DateCreated);
                 await repository.AddOneAsync(ticket);
                 _logger.LogInformation("Ticket successfully processed and saved: {TicketId}", ticket.Id);
 
